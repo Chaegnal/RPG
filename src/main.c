@@ -9,13 +9,14 @@
 #include <SFML/Graphics/RenderWindow.h>
 #include <SFML/Graphics.h>
 #include <SFML/Audio.h>
+#include <stdio.h>
 
 typedef struct {
     sfVideoMode Mode;
     sfRenderWindow *Window;
 } MainWindow;
 
-int init_main_window(MainWindow *main_window)
+static void init_main_window(MainWindow *main_window)
 {
     main_window->Mode.bitsPerPixel = 32;
     main_window->Mode.height = 1080;
@@ -25,15 +26,13 @@ int init_main_window(MainWindow *main_window)
 
 void window_loop(sfEvent event, MainWindow *main_window)
 {
-
-    init_main_window(main_window);
     while (sfRenderWindow_isOpen(main_window->Window)) {
-        sfRenderWindow_clear(main_window->Window, sfColor_fromRGB(100,100,100));
         while (sfRenderWindow_pollEvent(main_window->Window, &event))
         {
             if (event.type == sfEvtClosed)
                 sfRenderWindow_close(main_window->Window);
         }
+        sfRenderWindow_clear(main_window->Window, sfColor_fromRGB(100,100,100));
         sfRenderWindow_display(main_window->Window);
     }
 }
@@ -41,6 +40,7 @@ void window_loop(sfEvent event, MainWindow *main_window)
 int main(int argc, char **argv)
 {
     sfEvent event;
-    MainWindow *main_window;
-    window_loop(event, main_window);
+    MainWindow main_window;
+    init_main_window(&main_window);
+    window_loop(event, &main_window);
 }

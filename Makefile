@@ -6,6 +6,8 @@
 ##
 
 CC  =	gcc
+CCFLAGS = -Wextra -Wall -g3
+LDFLAGS = 	-lcsfml-graphics -lcsfml-window -lcsfml-system -lcsfml-audio
 
 SRC =	src/main.c								\
 
@@ -18,7 +20,7 @@ NAME =	rpg
 all:	$(NAME)
 
 $(NAME):	$(OBJ)
-	$(CC) -o $(NAME) $(OBJ) $(CFLAGS)
+	$(CC) -o $(NAME) $(OBJ) $(LDFLAGS)
 
 clean:
 	$(RM) $(OBJ)
