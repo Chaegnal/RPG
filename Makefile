@@ -14,12 +14,14 @@ SRC =	src/main.c								\
 		src/init_struct_map.c					\
 		src/destroy.c							\
 		src/map_generation.c 					\
+		src/get_size_map.c						\
+		src/map_parsing.c						\
 
 OBJ =	$(SRC:.c=.o)
 
 CFLAGS = -g
 
-NAME =	rpg
+NAME =	my_rpg
 
 all:	$(NAME)
 
