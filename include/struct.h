@@ -29,6 +29,7 @@ typedef struct {
     sfTexture *texture_srpite;
     sfSprite *sprite;
     sfIntRect rect;
+    sfClock *clock;
 } StructSprite;
 
 #endif /* !STRUCT_H_ */

@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2023
-** B-MUL-200-PAR-2-1-mypaint-mathis.brehm
+** B-MUL-200-PAR-2-1-myrpg-eva.legrand
 ** File description:
 ** main
 */
@@ -14,7 +14,7 @@ void window_loop(sfEvent event, MainWindow *main_window, StructMap *struct_map,
         while (sfRenderWindow_pollEvent(main_window->Window, &event)) {
             if (event.type == sfEvtClosed)
                 sfRenderWindow_close(main_window->Window);
-            move_sprite(event, struct_sprite->sprite);
+            move_sprite(event, struct_sprite);
         }
         generate_map(main_window, struct_map);
         sfRenderWindow_drawSprite(main_window->Window,

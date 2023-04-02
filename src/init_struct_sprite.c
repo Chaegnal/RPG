@@ -20,4 +20,5 @@ void init_struct_sprite(StructSprite *struct_sprite)
         struct_sprite->texture_srpite, sfTrue);
     sfSprite_setTextureRect(struct_sprite->sprite, struct_sprite->rect);
     sfSprite_setPosition(struct_sprite->sprite, (sfVector2f){100, 100});
+    struct_sprite->clock = sfClock_create();
 }

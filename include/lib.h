@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2023
-** B-MUL-200-PAR-2-1-mypaint-mathis.brehm
+** B-MUL-200-PAR-2-1-myrpg-eva.legrand
 ** File description:
 ** include
 */
@@ -24,5 +24,5 @@ int get_height_size_map(char *buffer);
 int get_width_size_map(char *buffer);
 int map_parsing(StructMap *struct_map, char **av);
 void init_struct_sprite(StructSprite *struct_sprite);
-void move_sprite(sfEvent event, sfSprite *sprite);
+void move_sprite(sfEvent event, StructSprite *struct_sprite);
 #endif /* !INCLUDE_H_ */
