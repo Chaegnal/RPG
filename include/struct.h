@@ -25,4 +25,10 @@ typedef struct {
     sfSprite* sprite_sol;
 } StructMap;
 
+typedef struct {
+    sfTexture *texture_srpite;
+    sfSprite *sprite;
+    sfIntRect rect;
+} StructSprite;
+
 #endif /* !STRUCT_H_ */

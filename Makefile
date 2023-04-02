@@ -16,6 +16,8 @@ SRC =	src/main.c								\
 		src/map_generation.c 					\
 		src/get_size_map.c						\
 		src/map_parsing.c						\
+		src/init_struct_sprite.c				\
+		src/move_sprite.c						\
 
 OBJ =	$(SRC:.c=.o)
 
