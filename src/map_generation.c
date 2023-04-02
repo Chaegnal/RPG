@@ -11,7 +11,8 @@ void block_choice(MainWindow *main_window, StructMap *struct_map, int i, int j)
 {
     int x = j * TAILLE_TILE;
     int y = i * TAILLE_TILE;
-    int width = get_width_size_map(struct_map->buffer);
+    int width = get_width_size_map(struct_map->buffer) + 1;
+
     switch (struct_map->buffer[i * width + j]) {
         case 'X':
             sfSprite_setPosition(struct_map->sprite_mur, (sfVector2f){x, y});
