@@ -11,12 +11,12 @@ void window_loop(sfEvent event, MainWindow *main_window, StructMap *struct_map,
     StructSprite *struct_sprite)
 {
     while (sfRenderWindow_isOpen(main_window->Window)) {
+        generate_map(main_window, struct_map);
         while (sfRenderWindow_pollEvent(main_window->Window, &event)) {
             if (event.type == sfEvtClosed)
                 sfRenderWindow_close(main_window->Window);
-            move_sprite(event, struct_sprite);
+                move_sprite(event, struct_sprite);
         }
-        generate_map(main_window, struct_map);
         sfRenderWindow_drawSprite(main_window->Window,
             struct_sprite->sprite, NULL);
         sfRenderWindow_display(main_window->Window);

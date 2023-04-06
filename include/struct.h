@@ -26,7 +26,7 @@ typedef struct {
 } StructMap;
 
 typedef struct {
-    sfTexture *texture_srpite;
+    sfTexture *texture_sprite;
     sfSprite *sprite;
     sfIntRect rect;
     sfClock *clock;

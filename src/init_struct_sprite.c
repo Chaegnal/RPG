@@ -9,16 +9,13 @@
 
 void init_struct_sprite(StructSprite *struct_sprite)
 {
-    struct_sprite->texture_srpite =
-        sfTexture_createFromFile("src/sprite/Fumiko.png", NULL);
+    struct_sprite->texture_sprite =
+        sfTexture_createFromFile("src/sprite/char_bluehair.png", NULL);
     struct_sprite->sprite = sfSprite_create();
-    struct_sprite->rect.left = 0;
-    struct_sprite->rect.top = 0;
-    struct_sprite->rect.width = 30;
-    struct_sprite->rect.height = 30;
+    struct_sprite->rect = (sfIntRect){0, 0, 30, 30};
     sfSprite_setTexture(struct_sprite->sprite,
-        struct_sprite->texture_srpite, sfTrue);
+        struct_sprite->texture_sprite, sfTrue);
     sfSprite_setTextureRect(struct_sprite->sprite, struct_sprite->rect);
-    sfSprite_setPosition(struct_sprite->sprite, (sfVector2f){100, 100});
+    sfSprite_setPosition(struct_sprite->sprite, (sfVector2f){600, 50    });
     struct_sprite->clock = sfClock_create();
 }

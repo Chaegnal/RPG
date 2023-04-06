@@ -14,7 +14,7 @@ void destroy_all(MainWindow *main_window,
     sfSprite_destroy(struct_map->sprite_sol);
     sfTexture_destroy(struct_map->texture_mur);
     sfTexture_destroy(struct_map->texture_sol);
-    sfTexture_destroy(struct_sprite->texture_srpite);
+    sfTexture_destroy(struct_sprite->texture_sprite);
     sfSprite_destroy(struct_sprite->sprite);
     sfRenderWindow_destroy(main_window->Window);
 }
