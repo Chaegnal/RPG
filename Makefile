@@ -74,7 +74,7 @@ NAME	=	my_rpg
 all:	$(NAME)
 
 $(NAME):	$(OBJ)
-	$(CC) -o $(NAME) $(OBJ) $(CFLAGS) $(CPPFLAGS) $(CSFML)
+	$(CC) -o $(NAME) $(OBJ) $(CFLAGS) $(CPPFLAGS) $(CSFML) -g3
 
 clean:
 	rm -f $(OBJ)
