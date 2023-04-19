@@ -14,6 +14,7 @@
 int main(void)
 {
     RPG_t *rpg = malloc(sizeof(RPG_t));
+    memset(rpg, 0, sizeof(RPG_t));
     // history_t *history = malloc(sizeof(history_t));
     // menu_t *menu = malloc(sizeof(menu_t));
     // maps_t *map = malloc(sizeof(maps_t));
