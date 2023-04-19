@@ -6,6 +6,8 @@
 */
 
 #include "all_struct.h"
+#include <stdlib.h>
+#include <string.h>
 
 int main(void)
 {
