@@ -5,8 +5,6 @@
 ** destroy
 */
 
-#include <SFML/Audio.h>
-#include <SFML/Graphics.h>
 #include "all_struct.h"
 
 void destroy_all(RPG_t *rpg)
